@@ -1,0 +1,56 @@
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:nth-child(2n) {
+    background-color: rgb(245, 245, 245);
+  }
+  * > {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  &__checkbox {
+    display: block;
+    flex-basis: 10px;
+  }
+  &__native-input {
+    display: none;
+    &:checked {
+      &+label {
+        background-color: rgb(172, 236, 226);
+      }
+    }
+  }
+  &__label {
+    border: 1px solid rgb(179, 179, 179);
+    display: block;
+    border-radius: 2px;
+    width: 10px;
+    height: 10px;
+  }
+
+  &__title {
+    width: calc(100% - 30px);
+    padding: 8px;
+  }
+
+
+  &__del {
+    display: block;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    width: 20px;
+  }
+  &__input {
+    display: none;
+  }
+  &_edit {
+    .list-item__title {
+      display: none;
+    }
+    .list-item__input {
+      display: block;
+    }
+  }
+}

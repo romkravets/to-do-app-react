@@ -1,24 +1,18 @@
-import React, { Component } from 'react';
+import * as React from 'react';
+import { Component } from 'react';
+import {TaskList} from './components/task-list/TaskList';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+        </header>
+        <TaskList/>
+      </div>
+    );
+  }
 }
 
 export default App;
